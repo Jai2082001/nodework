@@ -1,0 +1,40 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="outerDiv">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Text</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Net Time</th>
+            </tr>
+        <%for(let record of data) { %>
+            <tr>
+                <td><%= record.Date %></td>
+                <td><%= record.Text %></td>
+                <td><%= record['Start Time'] %></td>
+                <td><%= record['End Time'] %></td>
+                <td><%= record['Net Time'] %></td>
+            </tr>
+            
+        </table>
+        <%}%>
+        <form action="/" method="post">
+            <div class="outerDiv">
+            <input required name="date" placeholder="Date" type="text">
+            <input required name='text' placeholder="Text" type="text">
+            <input required name='startdate' placeholder="Start Date" type="date">
+            <input required name='enddate' placeholder="End Date" type="date">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

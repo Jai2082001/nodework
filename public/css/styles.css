@@ -1,0 +1,8 @@
+body{
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+.outerDiv{
+    background-color: white;
+    padding: 20px;
+}
